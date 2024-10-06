@@ -1,10 +1,13 @@
 {
 	"name": "@kawaz/worker-timer",
 	"version": "0.0.1",
-	"description": "A worker-thread based timer",
+	"description": "setTimeout/setInterval with worker",
 	"main": "src/index.ts",
 	"module": "src/index.ts",
 	"type": "module",
+	"scripts": {
+		"build": "bun run build.ts"
+	},
 	"devDependencies": {
 		"@types/bun": "latest"
 	},
