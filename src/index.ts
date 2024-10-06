@@ -126,7 +126,14 @@ export const createWorkerTimer = (): WorkerTimer => {
 		...args: unknown[]
 	) => {
 		const id = nextId()
-		idMap.set(id, { id, type, func, duration, args })
+		const invokeFunc =
+			type === 'setTimeout'
+				? (...args: unknown[]) => {
+						func(...args)
+						idMap.delete(id)
+					}
+				: func
+		idMap.set(id, { id, type, func: invokeFunc, duration, args })
 		worker.postMessage({ id, type, duration } as SetTimerMessage)
 		return id
 	}
