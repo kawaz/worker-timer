@@ -2,9 +2,8 @@
 	"name": "@kawaz/worker-timer",
 	"version": "0.0.1",
 	"description": "setTimeout/setInterval with worker",
-	"main": "src/index.ts",
-	"module": "src/index.ts",
-	"type": "module",
+	"main": "dist/index.js",
+	"module": "dist/index.js",
 	"scripts": {
 		"build": "bun run build.ts",
 		"lint": "bunx @biomejs/biome check . --write"
