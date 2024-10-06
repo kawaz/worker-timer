@@ -6,7 +6,8 @@
 	"module": "src/index.ts",
 	"type": "module",
 	"scripts": {
-		"build": "bun run build.ts"
+		"build": "bun run build.ts",
+		"lint": "bunx @biomejs/biome check . --write"
 	},
 	"devDependencies": {
 		"@types/bun": "latest"
