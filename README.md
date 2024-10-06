@@ -1,15 +1,9 @@
-# worker-timer
+# @kawaz/worker-timer
 
-To install dependencies:
+A library that executes `setTimeout` and `setInterval` in Web Workers.
 
-```bash
-bun install
-```
+## Features
 
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.1.29. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+- Provides `setTimeout` and `setInterval` that don't slack off even when the browser tab is in the background
+- Uses the same API as the standard `setTimeout` and `setInterval`
+- Fully supported in TypeScript
