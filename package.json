@@ -1,5 +1,6 @@
 {
 	"name": "@kawaz/worker-timer",
+	"license": "MIT",
 	"version": "0.0.1",
 	"description": "setTimeout/setInterval with worker",
 	"main": "dist/index.js",
