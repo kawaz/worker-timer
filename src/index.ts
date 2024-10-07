@@ -257,3 +257,27 @@ const _timerWorker = () => {
     }
   })
 }
+
+/**
+ * window オブジェクトのタイマー関数をWorkerTimerの実装で置き換える
+ * @returns 元のタイマー関数を復元する関数
+ */
+export const replaceWindowTimerFunctions = () => {
+	const originalSetTimeout = window.setTimeout
+	const originalSetInterval = window.setInterval
+	const originalClearTimeout = window.clearTimeout
+	const originalClearInterval = window.clearInterval
+
+	window.setTimeout = setTimeout as typeof window.setTimeout
+	window.setInterval = setInterval as typeof window.setInterval
+	window.clearTimeout = clearTimeout as typeof window.clearTimeout
+	window.clearInterval = clearInterval as typeof window.clearInterval
+
+	const restore = () => {
+	  window.setTimeout = originalSetTimeout
+	  window.setInterval = originalSetInterval
+	  window.clearTimeout = originalClearTimeout
+	  window.clearInterval = originalClearInterval
+	}
+	return restore
+  }
