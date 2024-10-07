@@ -1,18 +1,18 @@
 {
-	"name": "@kawaz/worker-timer",
-	"license": "MIT",
-	"version": "0.0.1",
-	"description": "setTimeout/setInterval with worker",
-	"main": "dist/index.js",
-	"module": "dist/index.js",
-	"scripts": {
-		"build": "bun run build.ts",
-		"lint": "bunx @biomejs/biome check . --write"
-	},
-	"devDependencies": {
-		"@types/bun": "latest"
-	},
-	"peerDependencies": {
-		"typescript": "^5.0.0"
-	}
+  "name": "@kawaz/worker-timer",
+  "license": "MIT",
+  "version": "0.0.1",
+  "description": "setTimeout/setInterval with worker",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "scripts": {
+    "build": "bun run build.ts",
+    "lint": "bunx @biomejs/biome check . --write"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
 }

@@ -7,9 +7,9 @@ import { clearInterval, setInterval, setTimeout } from '../src'
 // }, 1000)
 
 const id = setInterval(() => {
-	console.log('interval')
+  console.log('interval')
 }, 1000)
 
 const id2 = setTimeout(() => {
-	clearInterval(id)
+  clearInterval(id)
 }, 5000)
