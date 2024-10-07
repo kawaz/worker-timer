@@ -1,18 +1,33 @@
 {
   "name": "@kawaz/worker-timer",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "setTimeout/setInterval with worker",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "scripts": {
     "build": "bun run build.ts",
-    "lint": "bunx @biomejs/biome check . --write"
+    "lint": "bunx @biomejs/biome check . --write",
+    "prepack": "bun run build"
   },
   "devDependencies": {
     "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kawaz/worker-timer.git"
+  },
+  "homepage": "https://github.com/kawaz/worker-timer",
+  "bugs": {
+    "url": "https://github.com/kawaz/worker-timer/issues"
+  },
+  "keywords": [
+    "timer",
+    "worker",
+    "setTimeout",
+    "setInterval"
+  ]
 }
